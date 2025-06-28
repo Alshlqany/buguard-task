@@ -1,4 +1,4 @@
-import { SetIsOpen } from "@/interfaces";
+import { SetIsOpen } from "@/types";
 import React from "react";
 const XIcon = ({ setIsOpen }: SetIsOpen) => {
   return (

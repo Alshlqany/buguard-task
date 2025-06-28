@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import XIcon from "../icons/XIcon";
 import NavLinks from "./NavItems";
 import { itemVariants, menuVariants } from "../../animation";
-import { NavMenuProps } from "@/interfaces";
+import { NavMenuProps } from "@/types";
 
 const NavMenu = ({ isOpen = false, setIsOpen }: NavMenuProps) => {
   return (

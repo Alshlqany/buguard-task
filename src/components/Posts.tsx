@@ -3,7 +3,7 @@ import PostCard from "./PostCard";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "./Loading";
 import Pagination from "./Pagination";
-import type { Post, PostsProps } from "@/interfaces";
+import type { Post, PostsProps } from "@/types";
 
 const Posts = ({ limit = 10, isAllPosts = false }: PostsProps) => {
   const [page, setPage] = useState(1);

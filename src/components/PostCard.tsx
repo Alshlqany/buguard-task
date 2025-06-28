@@ -3,7 +3,7 @@ import React from "react";
 import ArrowUpRight from "./icons/ArrowUpRight";
 import Badge from "./Badge";
 import { motion } from "framer-motion";
-import type { PostCardProps } from "@/interfaces";
+import type { PostCardProps } from "@/types";
 
 const PostCard = ({ post, isRecent = false }: PostCardProps) => {
   return (

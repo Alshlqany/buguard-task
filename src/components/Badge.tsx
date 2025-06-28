@@ -1,4 +1,4 @@
-import { Category, TagColor } from "@/interfaces";
+import { Category, TagColor } from "@/types";
 import React from "react";
 
 const tagColors: TagColor[] = [

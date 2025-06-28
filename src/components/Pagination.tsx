@@ -1,6 +1,6 @@
 import RightArrow from "./icons/RightArrow";
 import LeftArrow from "./icons/LeftArrow";
-import type { PaginationProps } from "@/interfaces";
+import type { PaginationProps } from "@/types";
 
 const Pagination = ({ currentPage = 1, setCurrentPage }: PaginationProps) => {
   const pages: Array<number | string> = [];
