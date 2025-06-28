@@ -1,6 +1,5 @@
 "use client";
 import { ErrorPageProps } from "@/types";
-import { Backpack } from "lucide-react";
 import { useRouter } from "next/navigation";
 import LeftArrow from "./icons/LeftArrow";
 
