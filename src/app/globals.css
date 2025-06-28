@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-*{
-    font-family: Inter, sans-serif;
+* {
+  font-family: Inter, sans-serif;
 }

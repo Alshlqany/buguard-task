@@ -1,3 +1,10 @@
+interface ErrorPageProps {
+  title?: string;
+  message?: string;
+  showBackButton?: boolean;
+  showHomeButton?: boolean;
+}
+
 export interface SetIsOpen {
   setIsOpen: (isOpen: boolean) => void;
 }
@@ -16,12 +23,16 @@ export interface PostsProps {
   limit?: number;
   isAllPosts?: boolean;
 }
-
-export interface PostCardProps {
-  post: Post;
+export interface IsRecent {
   isRecent?: boolean;
 }
-
+export interface PostCardProps extends IsRecent {
+  post: Post;
+}
+export interface LoadingProps extends IsRecent {
+  numberOfCards?: number;
+  isPost?: boolean;
+}
 export interface PaginationProps {
   currentPage: number;
   setCurrentPage: (page: number) => void;

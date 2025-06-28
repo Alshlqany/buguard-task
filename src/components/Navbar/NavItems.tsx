@@ -7,11 +7,11 @@ const NavItems = () => {
   const menuItems: string[] = ["Blog", "Projects", "About", "Newsletter"];
 
   return (
-    <nav className="flex flex-col items-center gap-6 md:flex-row">
+    <nav className="flex flex-col items-center gap-6 md:flex-row overflow-hidden">
       {menuItems.map((item, i) => (
         <motion.a
           key={item}
-          href="#"
+          href={`/`}
           className="text-lg p-2"
           variants={itemVariants}
           custom={i + 1}

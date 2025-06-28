@@ -4,6 +4,7 @@ import ArrowUpRight from "./icons/ArrowUpRight";
 import Badge from "./Badge";
 import { motion } from "framer-motion";
 import type { PostCardProps } from "@/types";
+import Link from "next/link";
 
 const PostCard = ({ post, isRecent = false }: PostCardProps) => {
   return (
@@ -27,7 +28,7 @@ const PostCard = ({ post, isRecent = false }: PostCardProps) => {
           className="object-cover"
         />
       </div>
-      <div className="flex flex-col  gap-6">
+      <Link href={`/posts/${post.id}`} className="flex flex-col gap-6">
         <p className="text-lg text-[#6941C6] font-semibold">
           Sunday, 1 Jan 2023
         </p>
@@ -37,7 +38,9 @@ const PostCard = ({ post, isRecent = false }: PostCardProps) => {
           <ArrowUpRight />
         </div>
         <p className="text-gray-600">
-          {post.body.length >= 90 ? post.body.substr(0, 90) + "..." : post.body}
+          {post.body.length >= 90
+            ? post.body.substring(0, 90) + "..."
+            : post.body}
         </p>
 
         <div className="flex flex-wrap gap-2">
@@ -45,7 +48,7 @@ const PostCard = ({ post, isRecent = false }: PostCardProps) => {
             <Badge key={i} />
           ))}
         </div>
-      </div>
+      </Link>
     </motion.div>
   );
 };

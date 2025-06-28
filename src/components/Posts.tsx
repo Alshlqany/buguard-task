@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import PostCard from "./PostCard";
 import { useQuery } from "@tanstack/react-query";
-import Loading from "./Loading";
+import Loading from "./Loading/Loading";
 import Pagination from "./Pagination";
 import type { Post, PostsProps } from "@/types";
 
 const Posts = ({ limit = 10, isAllPosts = false }: PostsProps) => {
   const [page, setPage] = useState(1);
-  const { data: posts, isFetching } = useQuery({
+  const {
+    data: posts,
+    isFetching,
+    isError,
+  } = useQuery<Post[]>({
     queryKey: ["posts", page, limit],
     queryFn: async () => {
       const res = await fetch(
@@ -17,7 +21,10 @@ const Posts = ({ limit = 10, isAllPosts = false }: PostsProps) => {
     },
   });
   if (isFetching) {
-    return <Loading />;
+    return <Loading isRecent={!isAllPosts} numberOfCards={limit} />;
+  }
+  if (!posts || isError) {
+    throw new Error("Failed to fetch posts");
   }
   return (
     <>

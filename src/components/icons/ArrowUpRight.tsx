@@ -1,14 +1,10 @@
-"use client";
-import { useTheme } from "next-themes";
 import React from "react";
 
 const ArrowUpRight = () => {
-  const { theme } = useTheme();
-  const color = theme === "light" ? "#1A1A1A" : "#eee";
   return (
     <div>
       <svg
-        className="cursor-pointer"
+        className="cursor-pointer stroke-gray-900 dark:stroke-gray-100"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -17,7 +13,6 @@ const ArrowUpRight = () => {
       >
         <path
           d="M7 17L17 7M17 7H7M17 7V17"
-          stroke={color}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
