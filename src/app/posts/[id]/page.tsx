@@ -1,6 +1,8 @@
 import PostDetails from "@/components/PostDetails";
-
-const PostPage = async ({ params }: { params: { id: string } }) => {
+interface PostPageParams {
+  id: string;
+}
+const PostPage = async ({ params }: { params: Promise<PostPageParams> }) => {
   const { id } = await params;
   return <PostDetails id={id} />;
 };
