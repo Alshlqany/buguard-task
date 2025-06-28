@@ -37,7 +37,7 @@ const PostCard = ({ post, isRecent = false }: PostCardProps) => {
           <h3 className="text-xl font-semibold">{post.title}</h3>
           <ArrowUpRight />
         </div>
-        <p className="text-gray-600">
+        <p className="text-[#667085] dark:text-[#C0C5D0]">
           {post.body.length >= 90
             ? post.body.substring(0, 90) + "..."
             : post.body}
